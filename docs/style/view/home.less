@@ -1,0 +1,47 @@
+.home-view {
+    position: relative;
+
+    >.tweets {
+        border       : solid 0.5px;
+        border-radius: 4px;
+        position     : absolute;
+        top          : 100px;
+        right        : 17%;
+        max-width    : 280px;
+    }
+
+    >.banner-container {
+        position : absolute;
+        top      : 100px;
+        right    : 5%;
+        max-width: 280px;
+
+        >.notice-container,
+        .event-container {
+            >.embla {
+                overflow: hidden;
+
+                >.embla__container {
+                    display: flex;
+
+                    >.embla__slide {
+                        position: relative;
+                        flex    : 0 0 100%;
+
+                        >img {
+                            max-width    : 280px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        >.event-container {
+            >img {
+                max-width    : 280px;
+                border-radius: 4px;
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+.layout {
+    width: 100%;
+
+    >header {
+        top          : 0;
+        display      : flex;
+        justify-items: center;
+        width        : 100%;
+        height       : 52px;
+        position     : fixed;
+        top          : 0;
+        z-index      : 3;
+
+        >.nav {
+            display    : flex;
+            flex-wrap  : wrap;
+            align-items: center;
+            width      : 100%;
+            margin     : auto;
+            padding    : 0px 50px;
+            margin-top : 8px;
+
+            >.logo {
+                flex-grow: 1;
+
+                >h1 {
+                    >img {
+                        height: 100px;
+                    }
+                }
+            }
+
+            >.menu-btn,
+            .menu-icon {
+                display: none;
+            }
+
+            >.menu {
+                >.item {
+                    display    : flex;
+                    float      : left;
+                    font-weight: 300;
+
+                    >a {
+                        cursor         : pointer;
+                        padding        : 4px 8px;
+                        text-decoration: none;
+                        color          : white;
+                        font-size      : 21px;
+
+                        >img {
+                            height: 32px;
+                        }
+                    }
+                }
+            }
+
+            @media @phone {
+                >.menu-btn {
+                    display: none;
+                }
+
+                >.menu-btn:checked~.menu {
+                    display   : block;
+                    max-height: 52px;
+                }
+
+                >.menu-btn:checked~.menu-icon .navicon {
+                    background: transparent;
+                }
+
+                >.menu-btn:checked~.menu-icon .navicon:before {
+                    transform: rotate(-45deg);
+                }
+
+                >.menu-btn:checked~.menu-icon .navicon:after {
+                    transform: rotate(45deg);
+                }
+
+                >.menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+                >.menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+                    top: 0;
+                }
+
+                >.menu-icon {
+                    cursor     : pointer;
+                    display    : inline-block;
+                    padding    : 28px 8px;
+                    position   : relative;
+                    user-select: none;
+
+                    >.navicon {
+                        background: black;
+                        display   : block;
+                        height    : 2px;
+                        position  : relative;
+                        transition: background .2s ease-out;
+                        width     : 18px;
+                    }
+
+                    .navicon:before,
+                    .navicon:after {
+                        background: black;
+                        content   : '';
+                        display   : block;
+                        height    : 100%;
+                        position  : absolute;
+                        transition: all .2s ease-out;
+                        width     : 100%;
+                    }
+
+                    .navicon:before {
+                        top: 5px;
+                    }
+
+                    .navicon:after {
+                        top: -5px;
+                    }
+                }
+
+                >.menu {
+                    display   : none;
+                    margin    : 0;
+                    padding   : 0;
+                    list-style: none;
+                    clear     : both;
+                    max-height: 0;
+                    transition: max-height .2s ease-out;
+
+                    >.item {
+                        display         : block;
+                        width           : 100%;
+                        background-color: transparent;
+
+                        >a {
+                            display        : block;
+                            padding        : 20px 20px;
+                            text-decoration: none;
+
+                            &:hover {
+                                color           : black;
+                                background-color: #333332;
+                            }
+                        }
+
+                        >button {
+                            margin: 0px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    >main {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        margin         : auto;
+    }
+}
