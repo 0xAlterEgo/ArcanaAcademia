@@ -16,8 +16,7 @@ export default class Layout implements View {
                     el(".nav",
                         el(".logo",
                             el("h1",
-                                "Arcana Academia"
-                                // el("img", { src: "/images/view/home/logo-alter-ego.png", alt: "logo-alter-ego" }),
+                                el("img", { src: "/images/logo/arcana-academia.png", alt: "Arcana Academia Logo" }),
                             )
                         ),
                         el("input.menu-btn", { type: "checkbox", id: "menu-btn" }),
