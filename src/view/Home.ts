@@ -11,6 +11,7 @@ export default class Home implements View {
     constructor() {
         Layout.current.content.append(
             this.container = el(".home-view",
+                el(".overlay"),
                 el(".tweets",
                     el("a.twitter-timeline", {
                         "data-height": "560",
@@ -27,10 +28,10 @@ export default class Home implements View {
                         this.emblaNode = el(".embla",
                             el(".embla__container",
                                 el(".embla__slide",
-                                    el("img", { src: "/images/view/home/mock.png", alt: "mock" })
+                                    // el("img", { src: "/images/view/home/mock.png", alt: "mock" })
                                 ),
                                 el(".embla__slide",
-                                    el("img", { src: "/images/view/home/mock.png", alt: "mock" })
+                                    // el("img", { src: "/images/view/home/mock.png", alt: "mock" })
                                 ),
                             ),
                         ),
@@ -39,10 +40,10 @@ export default class Home implements View {
                         el(".embla",
                             el(".embla__container",
                                 el(".embla__slide",
-                                    el("img", { src: "/images/view/home/mock.png", alt: "mock" })
+                                    // el("img", { src: "/images/view/home/mock.png", alt: "mock" })
                                 ),
                                 el(".embla__slide",
-                                    el("img", { src: "/images/view/home/mock.png", alt: "mock" })
+                                    // el("img", { src: "/images/view/home/mock.png", alt: "mock" })
                                 ),
                             ),
                         ),
