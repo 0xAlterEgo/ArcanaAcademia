@@ -1,5 +1,6 @@
 import { BodyNode, DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
+import ViewUtil from "./ViewUtil";
 
 export default class Layout implements View {
 
@@ -14,7 +15,7 @@ export default class Layout implements View {
             (this.container = el(".layout",
                 el("header",
                     el(".nav",
-                        el(".logo",
+                        el("a.logo", { click: () => { ViewUtil.go("/") } },
                             el("h1",
                                 el("img", { src: "/images/logo/arcana-academia.png", alt: "Arcana Academia Logo" }),
                             )
