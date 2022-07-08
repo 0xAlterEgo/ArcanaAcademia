@@ -17,9 +17,10 @@ export default class LinkWalletToDiscord implements View {
                 el(".overlay"),
                 el("section",
                     el("header",
-                        el("h1", "WELCOME TO CAMPUS"),
+                        el("img", { src: "/images/logo/arcana-academia.png", alt: "Arcana Academia" }),
                     ),
                     el("article",
+                        el("h1", "WELCOME TO CAMPUS"),
                         el("a.discord-login-button", "SIGN TO REGISTER", {
                             href: "https://discord.com/api/oauth2/authorize?client_id=939799839129096244&redirect_uri=https%3A%2F%2Fapp.Arcana Academia.com%2Flink-wallet-to-discord&response_type=code&scope=identify",
                         }),

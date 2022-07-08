@@ -15,24 +15,29 @@ export default class Layout implements View {
             (this.container = el(".layout",
                 el("header",
                     el(".nav",
-                        el("a.logo", { click: () => { ViewUtil.go("/") } },
-                            el("h1",
-                                el("img", { src: "/images/logo/arcana-academia.png", alt: "Arcana Academia Logo" }),
-                            )
-                        ),
+                        // el("a.logo", { click: () => { ViewUtil.go("/") } },
+                        //     el("h1",
+                        //         el("img", { src: "/images/logo/arcana-academia.png", alt: "Arcana Academia Logo" }),
+                        //     )
+                        // ),
                         el("input.menu-btn", { type: "checkbox", id: "menu-btn" }),
                         el("label.menu-icon", { for: "menu-btn" },
                             el("span.navicon")
                         ),
                         el("ul.menu",
                             el("li.item",
-                                el("a", { href: "https://discord.gg/0xalterego", target: "_blank" },
-                                    el("img", { src: "/images/view/home/icn-discord.svg", alt: "discord" }),
+                                el("a", { href: "https://discord.gg/ArcanaAcademia", target: "_blank" },
+                                    el("img", { src: "/images/logo/discord.png", alt: "discord" }),
                                 )
                             ),
                             el("li.item",
-                                el("a", { href: "https://twitter.com/0xalterego_nft", target: "_blank" },
-                                    el("img", { src: "/images/view/home/icn-twitter.svg", alt: "twitter" }),
+                                el("a", { href: "https://twitter.com/ArcanaAcademia_nft", target: "_blank" },
+                                    el("img", { src: "/images/logo/twitter.svg", alt: "twitter" }),
+                                ),
+                            ),
+                            el("li.item",
+                                el("a", { href: "https://fnd.moe/", target: "_blank" },
+                                    el("img", { src: "/images/logo/findmoe.png", alt: "find.moe" }),
                                 ),
                             ),
                         ),
@@ -44,7 +49,7 @@ export default class Layout implements View {
     }
 
     public set title(title: string) {
-        document.title = `${title} | 0xAlterEgo`;
+        document.title = `${title} | ArcanaAcademia`;
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

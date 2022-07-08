@@ -15,7 +15,7 @@ export default class Home implements View {
                 el(".tweets",
                     el("a.twitter-timeline", {
                         "data-height": "560",
-                        href: "https://twitter.com/0xalterego_nft?ref_src=twsrc%5Etfw",
+                        href: "https://twitter.com/ArcanaAcademia_nft?ref_src=twsrc%5Etfw",
                     }),
                     el("script", {
                         async: "async",

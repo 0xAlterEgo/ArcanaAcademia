@@ -14,20 +14,20 @@
         bottom         : 0;
         left           : 0;
         right          : 0;
-        background     : url("/images/view/link-wallet-to-discord/link-wallet-to-discord-bg.png") center no-repeat;
+        background     : url("/images/img/link-wallet-to-discord-bg.png") center no-repeat;
         background-size: cover;
         opacity        : .7;
         width          : 100%;
         height         : 100vh;
     }
 
+    >header {}
+
     >section {
-        position        : absolute;
-        top             : 400px;
-        left            : 50px;
-        background-color: rgba(255, 255, 255, 0.6);
-        padding         : 64px;
-        border-radius   : 4px;
+        position: absolute;
+        top     : 300px;
+        left    : 120px;
+        padding : 64px;
 
         >header {
             display       : flex;
@@ -35,19 +35,27 @@
             text-align    : center;
             z-index       : 2;
 
-            >h1 {
-                font-size  : 50px;
-                font-weight: bold;
+            >img {
+                width        : 720px;
+                margin-bottom: 16px;
             }
         }
 
         >article {
-            z-index       : 2;
-            display       : flex;
-            flex-direction: column;
-            text-align    : center;
-            align-items   : center;
-            margin-top    : 16px;
+            border-radius   : 4px;
+            background-color: rgba(255, 255, 255, 0.6);
+            z-index         : 2;
+            display         : flex;
+            flex-direction  : column;
+            text-align      : center;
+            align-items     : center;
+            margin-top      : 16px;
+            padding         : 50px;
+
+            >h1 {
+                font-size  : 50px;
+                font-weight: bold;
+            }
 
             >img {
                 max-width       : 30%;

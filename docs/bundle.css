@@ -220,12 +220,12 @@ body {
   opacity: 1;
   transition: all 0.5s ease;
   transition-delay: 1s;
-  background-color: #fff;
 }
 .layout > header > .nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   width: 100%;
   margin: auto;
   padding: 0px 50px;
@@ -240,20 +240,32 @@ body {
 .layout > header > .nav .menu-icon {
   display: none;
 }
+.layout > header > .nav > .menu {
+  display: flex;
+  gap: 8px;
+}
 .layout > header > .nav > .menu > .item {
   display: flex;
   float: left;
   font-weight: 300;
 }
 .layout > header > .nav > .menu > .item > a {
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   padding: 4px 8px;
   text-decoration: none;
-  color: white;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  border: 1px solid #fff;
   font-size: 21px;
 }
+.layout > header > .nav > .menu > .item > a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
 .layout > header > .nav > .menu > .item > a > img {
-  height: 32px;
+  height: 30px;
 }
 @media only screen and (max-width: 719px) {
   .layout > header > .nav > .menu-btn {
@@ -350,7 +362,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url("/images/view/home/home-bg.png") center no-repeat;
+  background: url("/images/img/home-bg.png") center no-repeat;
   background-size: cover;
   opacity: 0.7;
   width: 100%;
@@ -408,7 +420,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url("/images/view/link-wallet-to-discord/link-wallet-to-discord-bg.png") center no-repeat;
+  background: url("/images/img/link-wallet-to-discord-bg.png") center no-repeat;
   background-size: cover;
   opacity: 0.7;
   width: 100%;
@@ -416,11 +428,9 @@ body {
 }
 .link-wallet-to-discord-view > section {
   position: absolute;
-  top: 400px;
-  left: 50px;
-  background-color: rgba(255, 255, 255, 0.6);
+  top: 300px;
+  left: 120px;
   padding: 64px;
-  border-radius: 4px;
 }
 .link-wallet-to-discord-view > section > header {
   display: flex;
@@ -428,17 +438,24 @@ body {
   text-align: center;
   z-index: 2;
 }
-.link-wallet-to-discord-view > section > header > h1 {
-  font-size: 50px;
-  font-weight: bold;
+.link-wallet-to-discord-view > section > header > img {
+  width: 720px;
+  margin-bottom: 16px;
 }
 .link-wallet-to-discord-view > section > article {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.6);
   z-index: 2;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   margin-top: 16px;
+  padding: 50px;
+}
+.link-wallet-to-discord-view > section > article > h1 {
+  font-size: 50px;
+  font-weight: bold;
 }
 .link-wallet-to-discord-view > section > article > img {
   max-width: 30%;
