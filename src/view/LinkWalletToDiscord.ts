@@ -22,7 +22,7 @@ export default class LinkWalletToDiscord implements View {
                     el("article",
                         el("h1", "WELCOME TO CAMPUS"),
                         el("a.discord-login-button", "SIGN TO REGISTER", {
-                            href: "https://discord.com/api/oauth2/authorize?client_id=939799839129096244&redirect_uri=https%3A%2F%2Fapp.Arcana Academia.com%2Flink-wallet-to-discord&response_type=code&scope=identify",
+                            href: "https://discord.com/oauth2/authorize?client_id=984057910688636969&redirect_uri=https%3A%2F%2Farcana.art%2Flink-wallet-to-discord&response_type=code&scope=identify",
                         }),
                     ),
                 ),
@@ -35,7 +35,7 @@ export default class LinkWalletToDiscord implements View {
         let code: string | undefined = new URLSearchParams(window.location.search).get("code")!;
         if (code !== null) {
             try {
-                await superagent.get("https://api.Arcana Academia.com/discord/token").query({
+                await superagent.get("https://api.0xalterego.com/discord/token").query({
                     code,
                     redirect_uri: `${window.location.protocol}//${window.location.host}/link-wallet-to-discord`,
                 });
@@ -49,7 +49,7 @@ export default class LinkWalletToDiscord implements View {
 
         if (code !== undefined) {
             try {
-                const result = await superagent.get("https://api.Arcana Academia.com/discord/me").query({ code });
+                const result = await superagent.get("https://api.0xalterego.com/discord/me").query({ code });
                 this.discordUser = result.body;
                 this.checkWalletConnected(code);
             } catch (error) {
@@ -69,7 +69,7 @@ export default class LinkWalletToDiscord implements View {
             const signedMessage = await EthereumWallet.signMessage(message);
 
             try {
-                const result = await fetch("https://api.Arcana Academia.com/link-wallet-to-discord", {
+                const result = await fetch("https://api.0xalterego.com/link-wallet-to-discord", {
                     method: "POST",
                     body: JSON.stringify({
                         code,

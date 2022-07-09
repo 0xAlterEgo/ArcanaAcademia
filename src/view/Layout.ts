@@ -31,7 +31,7 @@ export default class Layout implements View {
                                 )
                             ),
                             el("li.item",
-                                el("a", { href: "https://twitter.com/ArcanaAcademia_nft", target: "_blank" },
+                                el("a", { href: "https://twitter.com/Arcana_Academia", target: "_blank" },
                                     el("img", { src: "/images/logo/twitter.svg", alt: "twitter" }),
                                 ),
                             ),
