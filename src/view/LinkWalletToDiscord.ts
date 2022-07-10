@@ -1,6 +1,7 @@
-import { BodyNode, DomNode, el } from "@hanul/skynode";
-import { View, ViewParams } from "skyrouter";
+import { DomNode, el } from "skydapp-browser";
+import { View, ViewParams } from "skydapp-common";
 import superagent from "superagent";
+import Alert from "../component/shared/dialogue/Alert";
 import DiscordUserInfo from "../DiscordUserInfo";
 import EthereumWallet from "../ethereum/EthereumWallet";
 import Layout from "./Layout";
@@ -65,7 +66,7 @@ export default class LinkWalletToDiscord implements View {
         const address = await EthereumWallet.loadAddress();
         if (address !== undefined) {
 
-            const message = "Link Wallet to Discord";
+            const message = "Please sign with your wallet to access the services provided by Eureka and Arcana Academia";
             const signedMessage = await EthereumWallet.signMessage(message);
 
             try {
@@ -78,9 +79,9 @@ export default class LinkWalletToDiscord implements View {
                     }),
                 });
                 if ((await result.json()).linked === true) {
-                    alert("Link Succeed.");
+                    new Alert("Congratulations!", "You can use the services of bots provided by Arcana Academia", "OK",);
                 } else {
-                    alert("Link Failed.");
+                    new Alert("Connection Failure", "Failed to connect wallet. please try again!", "OK",);
                 }
             } catch (error) {
                 console.error(error);

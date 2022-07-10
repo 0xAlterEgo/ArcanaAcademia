@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import EventContainer from "eventcontainer";
+import { EventContainer } from "skydapp-common";
 
 class EthereumNetworkProvider extends EventContainer {
 

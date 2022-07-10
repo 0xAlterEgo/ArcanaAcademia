@@ -1,7 +1,7 @@
-import { SkyRouter } from "skyrouter";
 import Layout from "./view/Layout";
 import Home from "./view/Home";
 import LinkWalletToDiscord from "./view/LinkWalletToDiscord";
+import { SkyRouter } from "skydapp-common";
 
 (async () => {
     SkyRouter.route("**", Layout);

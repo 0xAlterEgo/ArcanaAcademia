@@ -1,7 +1,7 @@
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { BigNumber, BigNumberish, ethers } from "ethers";
 import { splitSignature } from "ethers/lib/utils";
-import EventContainer from "eventcontainer";
+import { EventContainer } from "skydapp-common";
 
 class EthereumWallet extends EventContainer {
 
