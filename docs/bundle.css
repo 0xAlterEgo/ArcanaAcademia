@@ -562,7 +562,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100vh;
@@ -583,7 +582,7 @@ body {
 .link-wallet-to-discord-view > section {
   position: absolute;
   top: 300px;
-  left: 120px;
+  left: 100px;
   padding: 64px;
 }
 .link-wallet-to-discord-view > section > header {
@@ -641,9 +640,11 @@ body {
   background-color: #43bdfd;
 }
 .link-wallet-to-discord-view > section > article > a:hover {
+  transition: all ease-in-out 300ms;
   background-color: rgba(67, 189, 253, 0.9);
 }
 .link-wallet-to-discord-view > section > article > a:active {
+  transition: all ease-in-out 300ms;
   background-color: rgba(67, 189, 253, 0.8);
 }
 
