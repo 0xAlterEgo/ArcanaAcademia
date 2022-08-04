@@ -40,18 +40,20 @@ export default class Layout implements View {
                                     el("img", { src: "/images/logo/fndmoe.png", alt: "find.moe" }),
                                 ),
                             ),
-                            el("li.artist",
-                                el("a", { href: "https://twitter.com/Mingdosa", target: "_blank" },
-                                    el("p", "Mingdosa"),
-                                ),
-                                el("a", { href: "https://twitter.com/tmtjuice_nft", target: "_blank" },
-                                    el("p", "Tmtjuice"),
-                                ),
-                            ),
                         ),
                     )
                 ),
                 el("main", (this.content = el(".content"))),
+                el("footer",
+                    el(".artist",
+                        el("a", { href: "https://twitter.com/Mingdosa", target: "_blank" },
+                            el("p", "Character Artwork 'Mingdosa'"),
+                        ),
+                        el("a", { href: "https://twitter.com/tmtjuice_nft", target: "_blank" },
+                            el("p", "Environment Artwork 'TMT' "),
+                        ),
+                    ),
+                ),
             ))
         );
     }

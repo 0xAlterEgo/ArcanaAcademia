@@ -517,21 +517,31 @@ body {
   .layout > header > .nav > .menu > .item > button {
     margin: 0px 20px;
   }
-  .layout > header > .nav > .menu > .artist {
-    text-decoration: none;
-    font-size: 12px;
-    color: #fff;
-  }
-  .layout > header > .nav > .menu > .artist > a {
-    display: block;
-    padding: 20px 20px;
-  }
 }
 .layout > main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto;
+}
+.layout > footer {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+}
+.layout > footer > .artist {
+  display: flex;
+  gap: 16px;
+}
+.layout > footer > .artist > a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  background-color: #63B2FD;
+  padding: 8px;
+}
+.layout > footer > .artist > a:hover {
+  color: #5389F4;
 }
 .home-view {
   position: relative;
@@ -545,7 +555,6 @@ body {
   right: 0;
   background: url("/images/img/home-bg.png") center no-repeat;
   background-size: cover;
-  opacity: 0.7;
   width: 100%;
   height: 100vh;
 }
